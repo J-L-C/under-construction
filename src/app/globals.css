@@ -2,32 +2,171 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.parallax__viewport {
+        height: 100vh;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        perspective: 1px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.layer1 {
+        transform: translateZ(0);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.layer2 {
+        transform: translateZ(-1px);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.layer3 {
+        transform: translateZ(-2px);
+}
+
+.layer3 {
+        transform: translateZ(-3px);
+}
+
+@keyframes animate-float {
+        0%, 100% {
+                transform: translateY(0);
+        }
+        50% {
+                transform: translateY(-50px);
+        }
+
+}
+
+/*This is an interesting animation as it make the blocks drop and kind of shake. Feels*/
+/*like a wave rippling through.*/
+
+/*.float {*/
+/*        animation: animate-float 10s cubic-bezier(.05,1.19,.93,-0.01) infinite;*/
+/*}*/
+
+.float {
+        animation: animate-float 7s cubic-bezier(.23,-0.02,.83,1.04) infinite;
+}
+
+.animation-delay-100{
+        animation-delay: 100ms;
+}
+
+.animation-delay-150{
+        animation-delay: 150ms;
+}
+
+.animation-delay-200{
+        animation-delay: 200ms;
+}
+
+.animation-delay-250{
+        animation-delay: 250ms;
+}
+
+.animation-delay-300{
+        animation-delay: 300ms;
+}
+
+.animation-delay-400{
+        animation-delay: 400ms;
+}
+
+.animation-delay-500{
+        animation-delay: 500ms;
+}
+
+.animation-delay-600{
+        animation-delay: 600ms;
+}
+
+.animation-delay-650{
+        animation-delay: 650ms;
+}
+
+.animation-delay-700{
+        animation-delay: 700ms;
+}
+
+.animation-delay-750{
+        animation-delay: 750ms;
+}
+
+.animation-delay-800{
+        animation-delay: 800ms;
+}
+
+.animation-delay-850{
+        animation-delay: 850ms;
+}
+
+.text-with-red-shadow-no-gradient-very-long {
+  text-shadow:
+          1px 1px 0px #ff00bb,
+          1.25px 1.25px 0px #ff00bb,
+          1.75px 1.75px 0px #ff00bb,
+          2px 2px 0px #ff00bb,
+          2.25px 2.25px 0px #ff00bb,
+          2.5px 2.5px 0px #ff00bb,
+          2.75px 2.75px 0px #ff00bb,
+          3px 3px 0px #ff00bb,
+          3.25px 3.25px 0px #ff00bb,
+          3.50px 3.50px 0px #ff00bb,
+          3.75px 3.75px 0px #ff00bb,
+          4px 4px 0px #ff00bb,
+          4.25px 4.25px 0px #ff00bb,
+          4.50px 4.50px 0px #ff00bb,
+          4.75px 4.75px 0px #ff00bb,
+          5px 5px 0px #ff00bb,
+          5.25px 5.25px 0px #ff00bb,
+          5.50px 5.50px 0px #ff00bb,
+          5.75px 5.75px 0px #ff00bb,
+          6px 6px 0px #ff00bb,
+          6.25px 6.25px 0px #ff00bb,
+          6.50px 6.50px 0px #ff00bb,
+          6.75px 6.75px 0px #ff00bb,
+          7px 7px 0px #ff00bb,
+          7.25px 7.25px 0px #ff00bb,
+          7.50px 7.50px 0px #ff00bb,
+          7.75px 7.75px 0px #ff00bb,
+          8px 8px 0px #ff00bb,
+          8.25px 8.25px 0px #ff00bb,
+          8.50px 8.50px 0px #ff00bb,
+          8.75px 8.75px 0px #ff00bb,
+          9px 9px 0px #ff00bb,
+          9.25px 9.25px 0px #ff00bb,
+          9.50px 9.50px 0px #ff00bb,
+          9.75px 9.75px 0px #ff00bb,
+          10px 10px 0px #ff00bb,
+          10.25px 10.25px 0px #ff00bb,
+          10.50px 10.50px 0px #ff00bb,
+          10.75px 10.75px 0px #ff00bb,
+          11px 11px 0px #ff00bb,
+          11.25px 11.25px 0px #ff00bb,
+          11.50px 11.50px 0px #ff00bb,
+          11.75px 11.75px 0px #ff00bb,
+          12px 12px 0px #ff00bb,
+          12.25px 12.25px 0px #ff00bb,
+          12.50px 12.50px 0px #ff00bb,
+          12.75px 12.75px 0px #ff00bb,
+          13px 13px 0px #ff00bb,
+          13.25px 13.25px 0px #ff00bb,
+          13.50px 13.50px 0px #ff00bb,
+          13.75px 13.75px 0px #ff00bb,
+          14px 14px 0px #ff00bb,
+          14.25px 14.25px 0px #ff00bb,
+          14.50px 14.50px 0px #ff00bb,
+          14.75px 14.75px 0px #ff00bb,
+          15px 15px 0px #ff00bb,
+          15.25px 15.25px 0px #ff00bb,
+          15.50px 15.50px 0px #ff00bb,
+          15.75px 15.75px 0px #ff00bb,
+          16px 16px 0px #ff00bb,
+          16.25px 16.25px 0px #ff00bb,
+          16.50px 16.50px 0px #ff00bb,
+          16.75px 16.75px 0px #ff00bb,
+          17px 17px 0px #ff00bb,
+          17.25px 17.25px 0px #ff00bb;
+
 }
